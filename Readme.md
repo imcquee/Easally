@@ -4,6 +4,8 @@
 
  1. Run install.vbs
  2. Enter the path to the game launcher that you want to run in handheld mode
+ 3. Open the shortcut on the desktop labeled: "Return to Game Mode"
+ 4. Optional: Click the box to no longer ask for the program to run
 
 The installer also creates a shortcut on the desktop that allows you to quickly go back to handheld mode
 
