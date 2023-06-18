@@ -21,4 +21,4 @@ If NOT (logonShell="explorer.exe") Then
     wShell.RegWrite regCell, "explorer.exe", "REG_SZ"
 End if
 wShell.Run("""explorer.exe""")
-wShell.RegWrite regCell, "cscript " & "//B //NoLogo " & Chr(34) & scriptPath  & Chr(34) & " " & Chr(34) & gameLauncher & Chr(34), "REG_SZ"
+wShell.RegWrite regCell, "wscript " & Chr(34) & scriptPath  & Chr(34) & " " & Chr(34) & gameLauncher & Chr(34), "REG_SZ"

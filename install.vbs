@@ -22,7 +22,7 @@ If NOT IsEmpty(gameLauncher) Then
         fso.CopyFile localAppPath, easallyFolder & "\", True
         fso.CopyFile localImgPath, easallyFolder & "\", True
 
-        wShell.RegWrite regCell, "cscript " & "//B //NoLogo " &  Chr(34) & scriptPath & Chr(34) & " " & Chr(34) & gameLauncher & Chr(34), "REG_SZ"
+        wShell.RegWrite regCell, "wscript " & Chr(34) & scriptPath & Chr(34) & " " & Chr(34) & gameLauncher & Chr(34), "REG_SZ"
         
         Set shortcut = wShell.CreateShortcut(desktop & "\Return to Game Mode.lnk")
         tPath = Chr(34) & command & Chr(34)
