@@ -9,7 +9,7 @@ localAppPath = curDir & "/src/easally.vbs"
 localImgPath = curDir & "/assets/icon.ico"
 regCell = "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\shell"
 gInput = InputBox("Enter the path to your game launcher (WITHOUT QUOTES):" + vbNewLine + vbNewLine + "Default Locations:" + vbNewLine + vbNewLine + "Steam: " + "C:\Program Files (x86)\Steam\steam.exe" + vbNewLine + vbNewLine + "Playnite: " + localFolder + vbNewLine + "\Playnite\Playnite.FullscreenApp.exe", "Easally")
-gameLauncher = replace(gInput, chr(34), "")
+gameLauncher = replace(gInput, """", "")
 'TODO make custom dialog box with IE
 If NOT IsEmpty(gameLauncher) Then
     'TODO add error handling
@@ -23,7 +23,7 @@ If NOT IsEmpty(gameLauncher) Then
         fso.CopyFile localImgPath, easallyFolder & "\", True
 
         wShell.RegWrite regCell, "wscript " & Chr(34) & scriptPath & Chr(34) & " " & Chr(34) & gameLauncher & Chr(34), "REG_SZ"
-        
+
         Set shortcut = wShell.CreateShortcut(desktop & "\Return to Game Mode.lnk")
         tPath = Chr(34) & command & Chr(34)
         shortcut.TargetPath = scriptPath
