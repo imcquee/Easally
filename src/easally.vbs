@@ -6,7 +6,7 @@ scriptPath = localFolder & "\Easally\easally.vbs"
 gameLauncher = WScript.Arguments(0)
 buffer = Split(gameLauncher, "\")
 executable = buffer(Ubound(buffer))
-wShell.Run("taskkill /im explorer.exe /F"), 1, TRUE
+wShell.Run("taskkill /im explorer.exe /F"), 0, TRUE
 wShell.Exec(gameLauncher)
 Set objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\.\root\cimv2")
 Set colProcesses = objWMIService.ExecQuery ("Select * from Win32_Process Where Name = '"& executable &"'")
