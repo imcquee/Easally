@@ -1,4 +1,4 @@
-Dim gameLauncher, localFolder, regCell, localAppPath, localImgPath, scriptPath, imgPath, desktop, easallyFolder, command, tPath, gInput
+Dim gameLauncher, localFolder, regCell, localAppPath, localImgPath, scriptPath, imgPath, desktop, easallyFolder, command, tPath
 Set wShell = CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
 desktop = wShell.SpecialFolders("Desktop")
@@ -8,8 +8,8 @@ curDir = wShell.CurrentDirectory
 localAppPath = curDir & "/src/easally.vbs"
 localImgPath = curDir & "/assets/icon.ico"
 regCell = "HKCU\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\shell"
-gInput = InputBox("Enter the path to your game launcher (WITHOUT QUOTES):" + vbNewLine + vbNewLine + "Default Locations:" + vbNewLine + vbNewLine + "Steam: " + "C:\Program Files (x86)\Steam\steam.exe" + vbNewLine + vbNewLine + "Playnite: " + localFolder + vbNewLine + "\Playnite\Playnite.FullscreenApp.exe", "Easally")
-gameLauncher = replace(gInput, """", "")
+gInput = InputBox("Enter the path to your game launcher:" + vbNewLine + vbNewLine + "Default Locations:" + vbNewLine + vbNewLine + "Steam: " + "C:\Program Files (x86)\Steam\steam.exe" + vbNewLine + vbNewLine + "Playnite: " + localFolder + vbNewLine + "\Playnite\Playnite.FullscreenApp.exe", "Easally")
+gameLauncher = replace(gameLauncher, Chr(34), "")
 'TODO make custom dialog box with IE
 If NOT IsEmpty(gameLauncher) Then
     'TODO add error handling
