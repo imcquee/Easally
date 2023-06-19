@@ -6,7 +6,7 @@
 
 1.  IMPORTANT: Extract all files before running. DO NOT run the script while previewing the zipped folder
 2.  Run install.vbs
-3.  Enter the path to the game launcher that you want to run in handheld mode. The easiest way to do this is by finding the exe for your launcher and copying its path from the file explorer. You can paste this value in.
+3.  Enter the path to the game launcher that you want to run in handheld mode. The easiest way to do this is by finding the exe for your launcher and copying its path from the file explorer. You can paste this value in BUT REMEMBER TO REMOVE THE QUOTES.
 4.  Open the shortcut on the desktop labeled: "Return to Game Mode"
 5.  Optional: Uncheck 'Always ask before opening this file' to be able to go to handheld mode without clicking yes every time
 
